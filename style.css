@@ -1,0 +1,221 @@
+*{
+
+  padding: 0;
+  border: 0;
+  margin: 0;
+  outline: 0;
+
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #2020;
+  background-image: url("./Images/minecraftbg.jpg");
+  min-height: 100dvh;
+  /* padding: 5% 0; */
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: .5s;
+
+  > :where(input) {
+
+    border-radius: 2px;
+    background-color: #8B8B8B;
+    box-shadow: 0px 0px 0px 5px #C6C6C6;
+    color: #fff;
+    margin: 2.5% 0;
+    padding: 5px 10px;  
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 100px;
+    min-height: 25px;
+    font-size: 1.25rem;
+
+  }
+
+  > img{
+
+    width: 10%;
+    margin-bottom: 5%;
+    transition: .25s;
+    min-width: 150px;
+
+    &:hover{
+
+      opacity: 0.9;
+      filter: drop-shadow(0px 0px 10px #0c0a15);
+      transition: .55s;
+      cursor: pointer;
+
+    }
+
+  }
+
+}
+
+.spin{
+
+  animation: spinning 2.5s linear;
+
+}
+
+@keyframes spinning {
+  0%{
+
+    scale: 1;
+    transform: rotate3d(0, 10, 0.5, 0deg);
+
+  }
+  10%{
+
+    transform: rotate3d(0, -10, -0.5, 3.142rad);
+
+  }
+  20%{
+
+    transform: rotate3d(0, 10, 0.5, 3.142rad);
+
+  }
+  30%{
+
+    transform: rotate3d(0, -10, -0.5, 3.142rad);
+
+  }
+  40%{
+
+    transform: rotate3d(0, 10, 0.5, 0deg);
+
+  }
+  50%{
+
+    scale: 0;
+    transform: rotate3d(0, -10, -0.5, 0deg);
+
+  }
+  60%{
+
+    transform: rotate3d(0, 10, 0.5, 3.142rad);
+
+  }
+  70%{
+
+    transform: rotate3d(0, -10, -0.5, 3.142rad);
+
+  }
+  80%{
+
+    transform: rotate3d(0, 10, 0.5, 3.142rad);
+
+  }
+  90%{
+
+    transform: rotate3d(0, -10, -0.5, 0deg);
+
+  }
+  100%{
+
+    scale: 1;
+    transform: rotate3d(0, 10, 0.5, 3.142rad);
+
+  }
+}
+
+:where(.encantamentos, .selectable-card){
+
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+
+  > .card{
+
+    background-color: #F3F3F3;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    width: 5%;
+    min-width: 40px;
+
+    > img{
+
+      width: 100%;
+
+    }
+
+    > h3{
+
+      margin: 5px 0;
+
+    }
+
+  }
+
+  
+}
+
+.selectable-card{
+
+  > .card{
+    
+    &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &:active{
+
+      background-color: #000;
+
+    }
+
+  }
+
+}
+
+
+@keyframes trading-image {
+  0%{
+
+    transform: scale(1);
+    filter: brightness(1);
+
+  }
+  25%{
+
+    filter: brightness(0.5);
+
+  }
+  50%{
+
+    transform: scale(0);
+    filter: brightness(0.25);
+
+  }
+  75%{
+
+    filter: brightness(0.5);
+
+  }
+  100%{
+
+    transform: scale(1);
+    filter: brightness(1);
+
+  }
+}
+
+.trading{
+
+  animation: trading-image .125s linear;
+
+}
